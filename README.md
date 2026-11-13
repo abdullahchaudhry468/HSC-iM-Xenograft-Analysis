@@ -34,4 +34,3 @@ The original **HSC/HSC-II annotations were used to select the cells**. They were
 - Zeng, Nagree et al. (2026), *Human haematopoietic stem cells remember inflammatory stress*, [Nature](https://doi.org/10.1038/s41586-026-10522-7).
 - [Published code and data (Zenodo)](https://doi.org/10.5281/zenodo.18850871).
 
-See [CITATION.md](CITATION.md) for attribution.
