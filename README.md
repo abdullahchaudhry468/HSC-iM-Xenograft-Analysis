@@ -13,9 +13,9 @@ Focus: Whether the two published cell populations could be distinguished using R
 
 ## Main results
 
-The RNA analysis identified **seven clusters**, and the ATAC-based analysis identified **four clusters**. Both showed separation between cells labeled HSC and HSC-II in the original study. The cluster numbers are computational groupings, not newly established biological cell types.
+The RNA analysis gave me **seven clusters**, while the ATAC analysis gave me **four**. Both showed a noticeable difference between the HSC and HSC-II populations identified in the original study. These clusters don't necessarily mean there are different cell types, but they do suggest there are differences within the populations.
 
-I also generated a ranked gene-expression comparison between HSC and HSC-II cells. These results are exploratory because the statistical analysis treats individual cells as observations rather than accounting for biological replicates.
+I also looked at which genes were expressed differently between HSC and HSC-II. This was more of an initial comparison, since I looked at the cells individually rather than accounting for differences between donors.
 
 ## Scope and limitations
 
