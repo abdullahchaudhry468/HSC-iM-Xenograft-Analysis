@@ -15,7 +15,7 @@ Focus: Whether the two published cell populations could be distinguished using R
 
 The RNA analysis gave me **seven clusters**, while the ATAC analysis gave me **four**. Both showed a noticeable difference between the HSC and HSC-II populations identified in the original study. These clusters don't necessarily mean there are different cell types, but they do suggest there are differences within the populations.
 
-I also looked at which genes were expressed differently between HSC and HSC-II. This was more of an initial comparison, since I looked at the cells individually rather than accounting for differences between donors.
+I also wanted to see which genes were expressed differently between HSC and HSC-II, so I used a Wilcoxon test to compare and rank them. A few genes stood out, including NFKB1, which is involved in inflammatory signaling and connects to what the paper was looking at. I kept this as more of a preliminary comparison because I was looking at individual cells rather than accounting for differences between donors. I'd need to look at those donor differences before making any stronger conclusions.
 
 ## Scope and limitations
 
