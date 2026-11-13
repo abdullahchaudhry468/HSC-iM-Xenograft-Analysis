@@ -2,7 +2,7 @@
 
 This project explores HSC and HSC-II cells from the xenograft data in *Human haematopoietic stem cells remember inflammatory stress* (Zeng, Nagree et al., 2026).
 
-I focused on whether the two published cell populations could be distinguished using RNA expression and chromatin accessibility data. This is a **partial reproduction** of the study's computational analysis.
+Focus: Whether the two published cell populations could be distinguished using RNA expression and chromatin accessibility data. This is a **partial reproduction** of the study's computational analysis.
 
 ## What I did
 
@@ -23,15 +23,11 @@ I also generated a ranked gene-expression comparison between HSC and HSC-II cell
 - [`figures/rna/`](figures/rna/) — RNA UMAP and HSC-II versus HSC marker-ranking figure.
 - [`figures/atac/`](figures/atac/) — ATAC-based UMAP.
 - [`figures/combined/`](figures/combined/) — RNA and ATAC UMAPs alongside the **published** joint RNA/ATAC WNN UMAP.
-- [`results/`](results/) — Cell-level cluster assignments, UMAP coordinates and RNA marker results. Use `Cell` to match rows between the RNA and ATAC tables.
-
-To run either analysis, open its notebook in Google Colab and select **Runtime → Run all**. The RNA notebook downloads the gene-expression counts from the original Zenodo archive; this can take considerable time. The ATAC notebook contains a copy of the authors' processed LSI input.
+- [`results/`](results/) — Cell-level cluster assignments, UMAP coordinates and RNA marker results. 
 
 ## Scope and limitations
 
 The original **HSC/HSC-II annotations were used to select the cells**. They were not supplied to the RNA or ATAC clustering algorithms, but were used afterward for comparison. The annotations were also used to group cells for the RNA marker analysis. The ATAC LSI features, published cell labels, and the published WNN UMAP came from the study's authors.
-
-I did **not** rerun the full combined RNA/ATAC WNN analysis, the original ATAC peak preprocessing, or the original donor-level quality-control workflow. The analyses here describe clustering and exploratory gene-expression differences; they do not establish a treatment effect or prove inflammatory memory.
 
 ## Sources
 
