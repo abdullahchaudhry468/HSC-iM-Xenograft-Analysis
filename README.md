@@ -19,7 +19,7 @@ I also wanted to see which genes were expressed differently between HSC and HSC-
 
 ## Scope and limitations
 
-The original **HSC/HSC-II annotations were used to select the cells**. They were not supplied to the RNA or ATAC clustering algorithms, but were used afterward for comparison. The annotations were also used to group cells for the RNA marker analysis. The ATAC LSI features, published cell labels, and the published WNN UMAP came from the study's authors.
+I used the HSC and HSC-II labels from the original study to decide which cells to focus on. However, when I ran the RNA and ATAC clustering analyses, I didn't use those labels to separate the cells. Instead, I compared my results with the original labels afterward to see how closely they matched. I also used the labels to compare gene expression between the two populations. For the ATAC analysis and the combined RNA/ATAC comparison, I used data that the researchers had already processed.
 
 ## Sources
 
