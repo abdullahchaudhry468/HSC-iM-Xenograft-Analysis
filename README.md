@@ -7,6 +7,7 @@ I focused on whether the two published cell populations could be distinguished u
 ## What I did
 
 - **RNA:** Used the deposited 10x gene-expression counts for 5,976 cells labeled HSC or HSC-II. I normalized the counts, selected variable genes, and ran PCA, clustering and UMAP using Scanpy.
+- **RNA markers:** Compared gene expression between the published HSC and HSC-II groups using a Wilcoxon test to identify genes that differed between the populations.
 - **ATAC:** Used the authors' processed ATAC LSI features for the same 5,976 cells and recalculated clusters and a UMAP.
 - **Comparison:** Matched cells across the two analyses by barcode and compared the resulting clusters with the published HSC/HSC-II labels.
 
@@ -14,21 +15,23 @@ I focused on whether the two published cell populations could be distinguished u
 
 The RNA analysis identified **seven clusters**, and the ATAC-based analysis identified **four clusters**. Both showed separation between cells labeled HSC and HSC-II in the original study. The cluster numbers are computational groupings, not newly established biological cell types.
 
+I also generated a ranked gene-expression comparison between HSC and HSC-II cells. These results are exploratory because the statistical analysis treats individual cells as observations rather than accounting for biological replicates.
+
 ## Files
 
 - [`notebooks/`](notebooks/) — Colab notebooks used for the RNA and ATAC analyses.
-- [`figures/rna/`](figures/rna/) — RNA UMAP.
+- [`figures/rna/`](figures/rna/) — RNA UMAP and HSC-II versus HSC marker-ranking figure.
 - [`figures/atac/`](figures/atac/) — ATAC-based UMAP.
 - [`figures/combined/`](figures/combined/) — RNA and ATAC UMAPs alongside the **published** joint RNA/ATAC WNN UMAP.
-- [`results/`](results/) — Cell-level cluster assignments and UMAP coordinates. Use `Cell` to match rows between the RNA and ATAC tables.
+- [`results/`](results/) — Cell-level cluster assignments, UMAP coordinates and RNA marker results. Use `Cell` to match rows between the RNA and ATAC tables.
 
 To run either analysis, open its notebook in Google Colab and select **Runtime → Run all**. The RNA notebook downloads the gene-expression counts from the original Zenodo archive; this can take considerable time. The ATAC notebook contains a copy of the authors' processed LSI input.
 
 ## Scope and limitations
 
-The original **HSC/HSC-II annotations were used to select the cells**. They were not supplied to the RNA or ATAC clustering algorithms, but were used afterward for comparison. The ATAC LSI features, published cell labels, and the published WNN UMAP came from the study's authors.
+The original **HSC/HSC-II annotations were used to select the cells**. They were not supplied to the RNA or ATAC clustering algorithms, but were used afterward for comparison. The annotations were also used to group cells for the RNA marker analysis. The ATAC LSI features, published cell labels, and the published WNN UMAP came from the study's authors.
 
-I did **not** rerun the full combined RNA/ATAC WNN analysis, the original ATAC peak preprocessing, or the original donor-level quality-control workflow. The analyses here describe clustering and do not establish a treatment effect or prove inflammatory memory.
+I did **not** rerun the full combined RNA/ATAC WNN analysis, the original ATAC peak preprocessing, or the original donor-level quality-control workflow. The analyses here describe clustering and exploratory gene-expression differences; they do not establish a treatment effect or prove inflammatory memory.
 
 ## Sources
 
